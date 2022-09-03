@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "ovGMGPQIte+Q89Vny/4d0EMVeGArKhCqKm3i6RRQ8CI=",
+  "Source": "microservicio.dotnet",
+  "BasePath": "_content/microservicio.dotnet",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

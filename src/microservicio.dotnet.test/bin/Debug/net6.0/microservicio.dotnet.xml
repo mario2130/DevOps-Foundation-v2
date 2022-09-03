@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>microservicio.dotnet</name>
+    </assembly>
+    <members>
+        <member name="T:microservicio.dotnet.Controllers.DevOpsv2Controller">
+            <summary>
+            Controlador del curso devops
+            </summary>
+        </member>
+        <member name="M:microservicio.dotnet.Controllers.DevOpsv2Controller.#ctor(Microsoft.Extensions.Logging.ILogger{microservicio.dotnet.Controllers.DevOpsv2Controller})">
+            <summary>
+            Constructor del api para el examen
+            </summary>
+            <param name="logger"></param>
+        </member>
+        <member name="M:microservicio.dotnet.Controllers.DevOpsv2Controller.Get">
+            <summary>
+            Api expuesta para valiar
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
