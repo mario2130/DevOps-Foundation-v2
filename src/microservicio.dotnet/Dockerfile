@@ -6,11 +6,11 @@ EXPOSE 80
 
 FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
 WORKDIR /src
-COPY ["src/microservicio.dotnet/microservicio.dotnet.csproj", "microservicio.dotnet/"]
+COPY ["microservicio.dotnet/microservicio.dotnet.csproj", "microservicio.dotnet/"]
 RUN dotnet restore "microservicio.dotnet/microservicio.dotnet.csproj"
 COPY . .
 WORKDIR "/src/microservicio.dotnet"
-RUN dotnet build "src/microservicio.dotnet.csproj" -c Release -o /app/build
+RUN dotnet build "microservicio.dotnet.csproj" -c Release -o /app/build
 
 FROM build AS publish
 RUN dotnet publish "src/microservicio.dotnet.csproj" -c Release -o /app/publish
