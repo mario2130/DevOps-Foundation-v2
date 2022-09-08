@@ -14,7 +14,7 @@ variables:
 
 steps:
 
-- script: dotnet test src/microservicio.dotnet.test/microservicio.dotnet.test.csproj
+- script: dotnet test src/microservicio.dotnet.test/microservicio.dotnet.test.csproj --collect "Code Coverage"
   displayName: 'dotnet test'
 
 - script: dotnet build src/microservicio.dotnet.sln --configuration $(buildConfiguration)

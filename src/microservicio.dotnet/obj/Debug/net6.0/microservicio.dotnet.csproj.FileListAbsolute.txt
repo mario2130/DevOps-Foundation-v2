@@ -31,7 +31,11 @@ C:\Users\Mining Tag\source\repos\microservicio.dotnet\src\microservicio.dotnet\b
 C:\Users\Mining Tag\source\repos\microservicio.dotnet\src\microservicio.dotnet\bin\Debug\net6.0\microservicio.dotnet.runtimeconfig.json
 C:\Users\Mining Tag\source\repos\microservicio.dotnet\src\microservicio.dotnet\bin\Debug\net6.0\microservicio.dotnet.dll
 C:\Users\Mining Tag\source\repos\microservicio.dotnet\src\microservicio.dotnet\bin\Debug\net6.0\microservicio.dotnet.pdb
+C:\Users\Mining Tag\source\repos\microservicio.dotnet\src\microservicio.dotnet\bin\Debug\net6.0\microservicio.dotnet.xml
 C:\Users\Mining Tag\source\repos\microservicio.dotnet\src\microservicio.dotnet\bin\Debug\net6.0\Microsoft.OpenApi.dll
+C:\Users\Mining Tag\source\repos\microservicio.dotnet\src\microservicio.dotnet\bin\Debug\net6.0\NLog.dll
+C:\Users\Mining Tag\source\repos\microservicio.dotnet\src\microservicio.dotnet\bin\Debug\net6.0\NLog.Extensions.Logging.dll
+C:\Users\Mining Tag\source\repos\microservicio.dotnet\src\microservicio.dotnet\bin\Debug\net6.0\NLog.Web.AspNetCore.dll
 C:\Users\Mining Tag\source\repos\microservicio.dotnet\src\microservicio.dotnet\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
 C:\Users\Mining Tag\source\repos\microservicio.dotnet\src\microservicio.dotnet\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\Mining Tag\source\repos\microservicio.dotnet\src\microservicio.dotnet\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
@@ -48,11 +52,7 @@ C:\Users\Mining Tag\source\repos\microservicio.dotnet\src\microservicio.dotnet\o
 C:\Users\Mining Tag\source\repos\microservicio.dotnet\src\microservicio.dotnet\obj\Debug\net6.0\microservicio.dotnet.csproj.CopyComplete
 C:\Users\Mining Tag\source\repos\microservicio.dotnet\src\microservicio.dotnet\obj\Debug\net6.0\microservicio.dotnet.dll
 C:\Users\Mining Tag\source\repos\microservicio.dotnet\src\microservicio.dotnet\obj\Debug\net6.0\refint\microservicio.dotnet.dll
+C:\Users\Mining Tag\source\repos\microservicio.dotnet\src\microservicio.dotnet\obj\Debug\net6.0\microservicio.dotnet.xml
 C:\Users\Mining Tag\source\repos\microservicio.dotnet\src\microservicio.dotnet\obj\Debug\net6.0\microservicio.dotnet.pdb
 C:\Users\Mining Tag\source\repos\microservicio.dotnet\src\microservicio.dotnet\obj\Debug\net6.0\microservicio.dotnet.genruntimeconfig.cache
 C:\Users\Mining Tag\source\repos\microservicio.dotnet\src\microservicio.dotnet\obj\Debug\net6.0\ref\microservicio.dotnet.dll
-C:\Users\Mining Tag\source\repos\microservicio.dotnet\src\microservicio.dotnet\bin\Debug\net6.0\microservicio.dotnet.xml
-C:\Users\Mining Tag\source\repos\microservicio.dotnet\src\microservicio.dotnet\obj\Debug\net6.0\microservicio.dotnet.xml
-C:\Users\Mining Tag\source\repos\microservicio.dotnet\src\microservicio.dotnet\bin\Debug\net6.0\NLog.dll
-C:\Users\Mining Tag\source\repos\microservicio.dotnet\src\microservicio.dotnet\bin\Debug\net6.0\NLog.Extensions.Logging.dll
-C:\Users\Mining Tag\source\repos\microservicio.dotnet\src\microservicio.dotnet\bin\Debug\net6.0\NLog.Web.AspNetCore.dll
