@@ -13,5 +13,12 @@ variables:
   buildConfiguration: 'Release'
 
 steps:
+
+- script: dotnet test src/microservicio.dotnet.test/microservicio.dotnet.test.csproj
+  displayName: 'dotnet test'
+
 - script: dotnet build src/microservicio.dotnet.sln --configuration $(buildConfiguration)
   displayName: 'dotnet build $(buildConfiguration)'
+
+- script: docker build -t microservicio.dotnet -f src/microservicio.dotnet/Dockerfile .
+  displayName: 'docker build'
