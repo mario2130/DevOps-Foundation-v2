@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "B15sZt6K+nO13ws4PBlvbk+zfH4K9GlWDsfXeMC8BifCdwiZDE7vYmnow2ndbcngmjFxx3TyVqhFIeOIKFNVLg==",
+  "dgSpecHash": "P6+BsXi9h1Q7SvO70T90OCaXy8VKamqv85RcebTxGMGelZ49/hTiDqjkvNeuRTWBSaEB4yCB1KZTqmPjrOGM2g==",
   "success": true,
   "projectFilePath": "C:\\Users\\Mining Tag\\source\\repos\\microservicio.dotnet\\src\\microservicio.dotnet.test\\microservicio.dotnet.test.csproj",
   "expectedPackageFiles": [
@@ -29,6 +29,7 @@
     "C:\\Users\\Mining Tag\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
     "C:\\Users\\Mining Tag\\.nuget\\packages\\microsoft.testplatform.objectmodel\\16.11.0\\microsoft.testplatform.objectmodel.16.11.0.nupkg.sha512",
     "C:\\Users\\Mining Tag\\.nuget\\packages\\microsoft.testplatform.testhost\\16.11.0\\microsoft.testplatform.testhost.16.11.0.nupkg.sha512",
+    "C:\\Users\\Mining Tag\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.14.0\\microsoft.visualstudio.azure.containers.tools.targets.1.14.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.win32.primitives\\4.3.0\\microsoft.win32.primitives.4.3.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\netstandard.library\\1.6.1\\netstandard.library.1.6.1.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\newtonsoft.json\\9.0.1\\newtonsoft.json.9.0.1.nupkg.sha512",
