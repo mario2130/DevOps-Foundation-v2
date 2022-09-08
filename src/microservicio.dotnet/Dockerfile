@@ -10,10 +10,10 @@ COPY ["src/microservicio.dotnet/microservicio.dotnet.csproj", "microservicio.dot
 RUN dotnet restore "microservicio.dotnet/microservicio.dotnet.csproj"
 COPY . .
 WORKDIR "/src/microservicio.dotnet"
-RUN dotnet build "microservicio.dotnet.csproj" -c Release -o /app/build
+RUN dotnet build "src/microservicio.dotnet.csproj" -c Release -o /app/build
 
 FROM build AS publish
-RUN dotnet publish "microservicio.dotnet.csproj" -c Release -o /app/publish
+RUN dotnet publish "src/microservicio.dotnet.csproj" -c Release -o /app/publish
 
 FROM base AS final
 WORKDIR /app
