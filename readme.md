@@ -20,7 +20,7 @@ dotnet test .\microservicio.dotnet.test\microservicio.dotnet.test.csproj /p:Coll
 	dotnet test .\microservicio.dotnet.test\microservicio.dotnet.test.csproj --collect "Code Coverage"
 	`
  
-- generar container 
+- generar container en local, se ejecuta este comando a la altura del sln
 
 `
 docker build -t microservicio.dotnet -f microservicio.dotnet/Dockerfile .
