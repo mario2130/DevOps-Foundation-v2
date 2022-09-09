@@ -20,5 +20,5 @@ steps:
 - script: dotnet build src/microservicio.dotnet.sln --configuration $(buildConfiguration)
   displayName: 'dotnet build $(buildConfiguration)'
 
-- script: docker build -t microservicio.dotnet -f src/Dockerfile .
+- script: docker build -t microservicio.dotnet --target build -f src/Dockerfile .
   displayName: 'docker build'
