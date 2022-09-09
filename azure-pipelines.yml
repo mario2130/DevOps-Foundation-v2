@@ -27,15 +27,17 @@ stages:
    - job: test 
      steps:
      - task: DotNetCoreCLI@2
+       displayName: Run test unit
        inputs:
-        command: test
-        project: '**/*test*/*.csproj'
-        publishTestResults: true
-        arguments: '--configuration $(buildConfiguration) /p:CollectCoverage=true /p:CoverletOutputFormat=cobertura'
+         command: test
+         project: '**/*test*/*.csproj'
+         publishTestResults: true
+         arguments: '--configuration $(buildConfiguration) /p:CollectCoverage=true /p:CoverletOutputFormat=cobertura'
      - task: PublishCodeCoverageResults@1
+       displayName: Coverage
        inputs:
-        codeCoverageTool: Cobertura
-        summaryFileLocation: '**/*coverage.covertura.xml'
+         codeCoverageTool: Cobertura
+         summaryFileLocation: '**/*coverage.covertura.xml'
 
  
 - stage: 

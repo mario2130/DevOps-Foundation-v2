@@ -10,6 +10,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Information Files", "Solution Information Files", "{074053A4-A57F-45D0-B4FC-6260A999BF4B}"
 	ProjectSection(SolutionItems) = preProject
 		..\azure-pipelines.yml = ..\azure-pipelines.yml
+		Dockerfile = Dockerfile
 		..\readme.md = ..\readme.md
 	EndProjectSection
 EndProject
