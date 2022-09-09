@@ -41,7 +41,7 @@ stages:
 - stage: 
   displayName: dockerbuild
   jobs:
-   - job: docker build 
+   - job: dockerbuild 
      steps: 
      - script: docker build -t microservicio.dotnet -f src/Dockerfile .
        displayName: 'docker build'
