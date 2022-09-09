@@ -30,7 +30,7 @@ stages:
        displayName: Run test unit
        inputs:
          command: test
-         project: '**/*test*/*.csproj'
+         project: 'src/**/*test*/*.csproj'
          publishTestResults: true
          arguments: '--configuration $(buildConfiguration) /p:CollectCoverage=true /p:CoverletOutputFormat=cobertura'
      - task: PublishCodeCoverageResults@1
