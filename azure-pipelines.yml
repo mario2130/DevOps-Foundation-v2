@@ -24,15 +24,16 @@ stages:
 - stage: 
   displayName: test
   jobs:
-   - job: test 
+   - job:
+     displayName: unit tests job
      steps:
      - task: DotNetCoreCLI@2
        displayName: Run test unit
        inputs:
          command: test
-         project: 'src/microservicio.dotnet.test/microservicio.dotnet.test.csproj'
+         project: '**/**/*test*/*.csproj'
          publishTestResults: true
-         arguments: '--configuration $(buildConfiguration) /p:CollectCoverage=true /p:CoverletOutputFormat=cobertura'
+         arguments: '--configuration $(buildConfiguration) /p:CollectCoverage=true /p:CoverletOutputFormat=cobertura' 
      - task: PublishCodeCoverageResults@1
        displayName: Coverage
        inputs:
