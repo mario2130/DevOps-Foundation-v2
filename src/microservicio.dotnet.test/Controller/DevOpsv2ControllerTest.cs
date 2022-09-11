@@ -34,5 +34,22 @@ namespace microservicio.dotnet.test.Controller
             Assert.True(okResult.Value!.ToString() == expected, "dont return empty");
 
         }
+
+        [Fact]
+        public async Task GetInformationDiffToEmpty()
+        {
+            ////Arange
+            var evalController = new DevOpsv2Controller(_logger);
+            evalController.ControllerContext.HttpContext = new DefaultHttpContext(); 
+
+
+            //Action 
+            IActionResult result = await evalController.Get();
+
+            //Assert
+            var okResult = Assert.IsType<OkObjectResult>(result);
+            Assert.True(okResult.Value!.ToString() != String.Empty);
+
+        }
     }
 }
