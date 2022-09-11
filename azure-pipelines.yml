@@ -48,7 +48,7 @@ stages:
   displayName: Run code analysis
   jobs:
    - job:
-     displayName: Run code analysis
+     displayName: Run code analysiss
      steps:
      - task: SonarCloudAnalyze@1
      - task: SonarCloudPublish@1
