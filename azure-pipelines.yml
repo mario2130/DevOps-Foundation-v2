@@ -16,12 +16,17 @@ variables:
 steps:
 
 - task: SonarCloudPrepare@1
+  displayName: Sonar Cloud Prepare
   inputs:
     SonarCloud: 'sonarCloud'
     organization: 'mariovillanuevagutierrez'
     scannerMode: 'MSBuild'
     projectKey: 'mariovillanuevagutierrez_Devops-foundation-v2'
     projectName: 'Devops-foundation-v2'
+    extraProperties: |
+      sonar.exclusions=**/obj/**,**/*.dll
+      sonar.cs.opencover.reportsPaths=$(Build.SourcesDirectory)/**/coverage.opencover.xml
+      sonar.cs.vstest.reportsPaths=$(Agent.TempDirectory)/*.trx
 
 - script: dotnet build src/microservicio.dotnet.sln --configuration $(buildConfiguration)
   displayName: 'dotnet build $(buildConfiguration)'
@@ -31,7 +36,7 @@ steps:
   inputs:
     command: test
     projects: '**/*test/*.csproj'
-    arguments: '--configuration $(buildConfiguration) /p:CollectCoverage=true /p:CoverletOutputFormat=opencover'
+    arguments: '--configuration $(buildConfiguration) /p:CollectCoverage=true /p:CoverletOutputFormat=opencover --logger trx'
 
 - task: SonarCloudAnalyze@1
   displayName: Run code analysis
