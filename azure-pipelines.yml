@@ -45,12 +45,15 @@ stages:
      - script: dotnet test src/microservicio.dotnet.test/microservicio.dotnet.test.csproj --configuration $(buildConfiguration)
 
 - stage: 
-  displayName: Runcodeanalysis
+  displayName: Run code analysis
   jobs:
    - job:
-     displayName: Runcodeanalysis
+     displayName: Run code analysis
      steps:
      - task: SonarCloudAnalyze@1
+     - task: SonarCloudPublish@1
+       inputs:
+        pollingTimeoutSec: '300'
 
 - stage: 
   displayName: dockerbuild
@@ -59,13 +62,3 @@ stages:
      steps: 
      - script: docker build -t microservicio.dotnet -f src/Dockerfile .
        displayName: 'docker build'
-
-- stage: 
-  displayName: Runcodeanalysis
-  jobs:
-   - job:
-     displayName: Prepare to sonar 
-     steps:
-     - task: SonarCloudPublish@1
-       inputs:
-        pollingTimeoutSec: '300'
