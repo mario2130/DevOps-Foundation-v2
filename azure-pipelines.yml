@@ -27,7 +27,7 @@ steps:
   displayName: 'dotnet build $(buildConfiguration)'
 
 
-- script: dotnet test src/microservicio.dotnet.test/microservicio.dotnet.test.csproj --configuration $(buildConfiguration) --collect "Code Coverage"
+- script: dotnet test src/microservicio.dotnet.test/microservicio.dotnet.test.csproj --configuration $(buildConfiguration) --collect "Code coverage"
   displayName: 'dotnet test $(buildConfiguration)'
 
 - task: SonarCloudAnalyze@1
@@ -36,7 +36,7 @@ steps:
 - task: SonarCloudPublish@1
   displayName: Publish Quality Gate Result
   inputs:
-   pollingTimeoutSec: '300'
+    pollingTimeoutSec: '300'
     
 - script: docker build -t microservicio.dotnet -f src/Dockerfile .
   displayName: 'docker build'
