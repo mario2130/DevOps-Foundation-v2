@@ -12,7 +12,21 @@ pool:
 variables:
   buildConfiguration: 'Release'
 
+
 stages:
+- stage: 
+  displayName: Prepare to sonar
+  jobs:
+   - job:
+     displayName: Prepare to sonar 
+     steps:
+       - task: SonarCloudPrepare@1
+         inputs:
+          SonarCloud: 'sonarCloud'
+          organization: 'mariovillanuevagutierrez'
+          scannerMode: 'MSBuild'
+          projectKey: 'mariovillanuevagutierrez_Devops-foundation-v2'
+          projectName: 'Devops-foundation-v2'
 - stage: 
   displayName: build
   jobs:
@@ -29,7 +43,15 @@ stages:
      displayName: unit tests job
      steps:
      - script: dotnet test src/microservicio.dotnet.test/microservicio.dotnet.test.csproj --configuration $(buildConfiguration)
-  
+
+- stage: 
+  displayName: Runcodeanalysis
+  jobs:
+   - job:
+     displayName: Runcodeanalysis
+     steps:
+     - task: SonarCloudAnalyze@1
+
 - stage: 
   displayName: dockerbuild
   jobs:
@@ -37,3 +59,13 @@ stages:
      steps: 
      - script: docker build -t microservicio.dotnet -f src/Dockerfile .
        displayName: 'docker build'
+
+- stage: 
+  displayName: Runcodeanalysis
+  jobs:
+   - job:
+     displayName: Prepare to sonar 
+     steps:
+     - task: SonarCloudPublish@1
+       inputs:
+        pollingTimeoutSec: '300'
