@@ -26,9 +26,12 @@ steps:
 - script: dotnet build src/microservicio.dotnet.sln --configuration $(buildConfiguration)
   displayName: 'dotnet build $(buildConfiguration)'
 
-
-- script: dotnet test src/microservicio.dotnet.test/microservicio.dotnet.test.csproj --configuration $(buildConfiguration) --collect "Code coverage"
+- task: DotNetCoreCLI@2
   displayName: 'dotnet test $(buildConfiguration)'
+  inputs:
+    command: test
+    projects: '**/*test/*.csproj'
+    arguments: '--configuration $(buildConfiguration) --collect "Code coverage"'
 
 - task: SonarCloudAnalyze@1
   displayName: Run code analysis
