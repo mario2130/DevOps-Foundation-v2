@@ -24,7 +24,7 @@ steps:
     projectKey: 'mariovillanuevagutierrez_Devops-foundation-v2'
     projectName: 'Devops-foundation-v2'
     extraProperties: |
-      sonar.exclusions=**/obj/**,**/*.dll
+      sonar.exclusions=**/obj/**,**/*.dll,**Program.*
       sonar.cs.opencover.reportsPaths=$(Build.SourcesDirectory)/**/coverage.opencover.xml
       sonar.cs.vstest.reportsPaths=$(Agent.TempDirectory)/*.trx
 
