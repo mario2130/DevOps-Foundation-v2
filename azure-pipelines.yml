@@ -49,3 +49,18 @@ steps:
     
 - script: docker build -t microservicio.dotnet -f src/Dockerfile .
   displayName: 'docker build'
+
+- task: Docker@2
+    displayName: Build and push an image to container registry
+    inputs:
+    command: buildAndPush
+    repository: $(imageRepository)
+    dockerfile: $(dockerfilePath)
+    containerRegistry: $(dockerRegistryServiceConnection)
+    tags: |
+        $(tag)
+
+- task: PublishPipelineArtifact@1
+    inputs:
+    artifactName: 'manifests'
+    path: 'manifests'
